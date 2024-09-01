@@ -101,7 +101,7 @@ namespace Demo
             foreach (var item in Result02) { Console.WriteLine(item); }
             #endregion
             #endregion
-            #region Built-In Delegates[predicate ,Func,Action]
+            #region Built-In Delegates[predicate ,Func,Action] && Anonymous Method 
             #region predicate
             List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
