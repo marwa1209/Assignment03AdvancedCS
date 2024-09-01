@@ -16,10 +16,17 @@ namespace Demo.Example04
         {
             return X % 2 == 1;
         }
-        public static bool BySTenFilter(int X)
+        public static bool BySevenFilter(int X)
+        {
+            return X % 7 == 0;
+        }
+        public static bool ByTenFilter(int X)
         {
             return X % 10 == 0;
         }
-
+        public static bool FilterString(string X)
+        {
+            return X.Length>4;
+        }
     }
 }

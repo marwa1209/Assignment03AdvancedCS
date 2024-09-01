@@ -77,12 +77,17 @@ namespace Demo
             #endregion
             #region Delegate Example 4
             List<int> Numbers = Enumerable.Range(0, 100).ToList();
-            List<int> Result= Helper<int>.OddNumbers(Numbers,FilterFunctions.OdddFilter);
+            List<int> Result= Helper<int>.Elemsnts(Numbers,FilterFunctions.OdddFilter);
            //foreach (var item in Result) { Console.WriteLine( item); }
 
-            List<int> ResultBySeven = Helper<int>.OddNumbers(Numbers, FilterFunctions.BySEvenFilter);
+            List<int> ResultBySeven = Helper<int>.Elemsnts(Numbers, FilterFunctions.BySevenFilter);
 
             foreach (var item in ResultBySeven) { Console.WriteLine( item); }
+            Console.WriteLine("string Filter");
+            List<string> Names02 = new List<string>() { "Marwaa", "reem", "ra", "jfjf", "marwan" };
+            List<string> Result02 = Helper<string>.Elemsnts(Names02, FilterFunctions.FilterString);
+
+            foreach (var item in Result02) { Console.WriteLine(item); }
             #endregion
         }
     }
