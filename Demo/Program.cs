@@ -110,10 +110,10 @@ namespace Demo
             List<int> evenNumbers = numbers.FindAll(isEven);
 
             Console.WriteLine("Even numbers in the list:");
-            foreach (int number in evenNumbers)
-            {
-                Console.WriteLine(number);
-            }
+            //foreach (int number in evenNumbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
             #endregion
             #region Func
             Func<int> getRandomNumber = () => new Random().Next(1, 100);
