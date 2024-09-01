@@ -145,6 +145,9 @@ namespace Demo
             multiplyNumbers(2, 3, 4);
             #endregion
             #endregion
+            #region Var new c# feature
+            var Predicate = (int x) => x == 2; 
+            #endregion
 
         }
         #region predicate
