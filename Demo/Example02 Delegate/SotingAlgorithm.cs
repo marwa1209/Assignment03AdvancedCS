@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Demo.Example02_Delegate
 {
-    public delegate bool CompareFuncDelegate <T>(T X ,T Y);
+    public delegate bool CompareFuncDelegate <in T ,out TResult>(T X ,T Y);
     internal class SotingAlgorithm<T>
     {
         #region non-generic
@@ -40,7 +40,7 @@ namespace Demo.Example02_Delegate
         #endregion
 
         #region Generic
-        public static void BubbleSort(T[] arr, CompareFuncDelegate<T> CompareFunc)
+        public static void BubbleSort(T[] arr, CompareFuncDelegate<T ,bool> CompareFunc)
         {
             if (arr is not null)
             {

@@ -1,4 +1,5 @@
 ﻿using Demo.Example02_Delegate;
+using Demo.Example04;
 
 namespace Demo
 {
@@ -73,6 +74,15 @@ namespace Demo
             {
                 Console.WriteLine(item);
             }
+            #endregion
+            #region Delegate Example 4
+            List<int> Numbers = Enumerable.Range(0, 100).ToList();
+            List<int> Result= Helper<int>.OddNumbers(Numbers,FilterFunctions.OdddFilter);
+           //foreach (var item in Result) { Console.WriteLine( item); }
+
+            List<int> ResultBySeven = Helper<int>.OddNumbers(Numbers, FilterFunctions.BySEvenFilter);
+
+            foreach (var item in ResultBySeven) { Console.WriteLine( item); }
             #endregion
         }
     }
