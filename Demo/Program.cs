@@ -146,9 +146,33 @@ namespace Demo
             #endregion
             #endregion
             #region Var new c# feature
-            var Predicate = (int x) => x == 2; 
+            var Predicate = (int x) => x == 2;
             #endregion
+            #region Some List-Methods That take Functions As Parameter.
+            // Create a list of numbers from 1 to 100
+            List<int> numbers02 = Enumerable.Range(1, 100).ToList();
 
+            //// Get elements based on a passed function (delegate)
+            //List<int> oddNumbers = GetElementsBasedOnPassedFunction(numbers, delegate (int x) { return x % 2 == 1; });
+
+            //// Anonymous function
+            //oddNumbers = GetElementsBasedOnPassedFunction(numbers, (x) => x % 2 == 1);
+
+            //// Lambda expression
+            //oddNumbers = GetElementsBasedOnPassedFunction(numbers, x => x % 2 == 1);
+
+            // Find all elements that match a condition
+            List<int> oddNumbers = numbers.FindAll(number => number % 2 == 1);
+
+            // Retrieve all elements that match a condition
+            int oddNumber = numbers.Find(number => number % 2 == 1);
+
+            // Print odd numbers
+            foreach (int number2 in oddNumbers)
+            {
+                Console.WriteLine(number2);
+            }
+            #endregion
         }
         #region predicate
         static bool IsEvenNumber(int number)
