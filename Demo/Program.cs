@@ -142,9 +142,10 @@ namespace Demo
             addNumbers(5, 7);
 
             Action<int, int, int> multiplyNumbers = (x, y, z) => Console.WriteLine($"Product: {x * y * z}");
-            multiplyNumbers(2, 3, 4); 
+            multiplyNumbers(2, 3, 4);
             #endregion
             #endregion
+
         }
         #region predicate
         static bool IsEvenNumber(int number)
